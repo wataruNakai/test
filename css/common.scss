@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+$main:#391E88;
+/*----------------------------------------
+	reset
+----------------------------------------*/
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header, main, menu, nav, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+header, footer, article, section, aside, main, nav, menu, figure, figcaption {
+  display: block;
+}
+
+span, small, strong, em, b, i {
+  color: inherit;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+input, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+q::before,
+q::after {
+  display: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+html,body{
+  color: #333;
+  line-height: 1.1;
+  font-family: "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  scroll-behavior: smooth;
+}
+/*----------------------------------------
+	header
+----------------------------------------*/
+.header{
+  height: calc(64/375*100vw);
+  line-height: calc(64/375*100vw);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: all 0.5s ease;
+  z-index: 20;
+  &.scroll-nav{
+    background-color: #21054d;
+  }
+}
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo{
+  color: #fff;
+}
+@media (min-width:768px){
+  .header{
+    height: 86px;
+    line-height: 86px;
+  }
+  .header__inner{
+   
+  }
+}
+/*----------------------------------------
+	hamburger
+----------------------------------------*/
+.hamburger{
+  border: none;
+  outline: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  z-index: 11;
+  &.active{
+    .hamburger__line{
+      background: transparent;
+      &::before{
+        transform: rotate(45deg);
+        margin-top: 0;
+      }
+      &::after{
+        transform: rotate(-45deg);
+        margin-top: 0;
+      }
+    }
+  }
+}
+.hamburger__line{
+  width: 34px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+.hamburger__line::before,
+.hamburger__line::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 2px;
+  border-radius: 4px;
+  background: #fff;
+  transition: transform 0.4s ease;
+}
+.hamburger__line::before{
+  margin-top: -7px;
+}
+.hamburger__line::after{
+  margin-top: 7px;
+}
+@media (min-width:768px){
+  .hamburger{
+    display: none;
+  }
+}
+/*----------------------------------------
+	btn
+----------------------------------------*/
+
+.btn{
+  font-size: 15px;
+  border: 1px solid #fff;
+  display: block;
+  width: 225px;
+  border-radius: 50px;
+  padding: 15px 70px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  
+}
+.center__btn{
+  width: 200px;
+  border-radius: 50px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);  color: #fff;
+  margin-top: 30px;
+  background-size: 200% auto;
+  transition: all 0.3s ease;
+  position: relative;
+  &:hover{
+    background-position: right center;
+
+    .fa-sort-up{
+      right: 8%;
+    }
+
+  }
+}
+.hero__btn{
+  position: relative;
+}
+.fa-sort-up{
+  display: block;
+  position: absolute;
+  right: 10%;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+
+}
+@media (min-width:768px){
+  .btn{
+    margin: 30px auto 0;
+  }
+}
+/*----------------------------------------
+	gnav
+----------------------------------------*/
+.gnav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-image: linear-gradient(135deg,#7633a4,#250d65);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  ul{
+    li{
+      text-align: center;
+      font-weight: bold;
+      font-size: 15px;
+      color:#fff;
+    }
+  }
+  &.active{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (min-width:768px){
+  .gnav{
+    position: static;
+    width:auto;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    background: transparent;
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li{
+        &:not(:last-child){
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+/*gnavはSP・PCのレイアウトの差異が非常に大きいため、
+他のパーツのようにSP用の記述をした後でPC用の記述で上書きをすると
+SP用の指定の打ち消しが多数必要となってしまいます。
+このようなデザインの場合は打ち消しや上書きを最小限に抑えるため、
+各デバイス共通のスタイル／SP専用のスタイル／PC専用のスタイル 
+といった具合にデバイスごとにスタイル指定を切り分けた方が
+効率的で分かりやすいCSSになります。*/
+
+
+
+
+/*----------------------------------------
+	footer
+----------------------------------------*/
+.footer{
+  background: #120E19;
+  color: #fff;
+}
+.footer__inner{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__nav{
+  display: flex;
+  // justify-content: space-between;
+  // align-items: center; 
+  flex-wrap: wrap;
+  li{
+    width: calc((100% - 20px) / 4 );
+    font-weight: bold;
+    &:nth-child(n+5){
+      margin-top: 20px;
+    }
+    &:nth-child(5){
+      margin-right: 20px;
+    }
+  }
+}
+.copy{
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  font-size: 10px;
+  color: #A798B7;
+}
+
+@media (min-width:768px){
+  .footer__nav{
+    flex-wrap: nowrap;
+    justify-content: center;
+    li{
+      width: auto;
+      margin-right: 20px;
+      &:nth-child(n+5){
+        margin-top: 0px;
+      }
+      &:nth-child(5){
+        margin-right: 0px;
+      }
+    }
+  }
+}
+/*----------------------------------------
+	.container
+----------------------------------------*/
+.container{
+  max-width: calc(335/375*100vw);
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width:768px){
+  .container{
+    max-width: calc(1380/1440*100vw);
+  }
+}
+/*----------------------------------------
+	pageTop
+----------------------------------------*/
+.pageTop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  .fa-long-arrow-up{
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: $main;
+  }
+  &.active{
+    display: block;
+    opacity: 1;
+  }
+}
+
+
+
+
+/*以下のカテゴリごとに設計したCSSを記述してください。
+必要があればカテゴリを増やしても構いません。
+カテゴリ名が日本語なのが気に入らない場合は英語や
+自分で設定したブロック名に変更しても構いません。*/
+
+/*コンポーネント一覧のヘッダー・フッターは既存の章末練習問題のものを流用していますので
+ブロック名がローワーキャメルケースとなっていますが、以下で設計する汎用コンポーネントの
+命名規則は新たに決めてもらって構いません。*/
+
+/*----------------------------------------
+	ボタン
+----------------------------------------*/
+
+
+/*----------------------------------------
+	テキストスタイル
+----------------------------------------*/
+
+
+/*----------------------------------------
+	リスト
+----------------------------------------*/
+
+
+/*----------------------------------------
+	枠囲み
+----------------------------------------*/
+
+
+/*----------------------------------------
+	ページタイトル
+----------------------------------------*/
+
+
+/*----------------------------------------
+	見出し
+----------------------------------------*/
+
+
+/*----------------------------------------
+	アイテム一覧
+----------------------------------------*/
+
+
+/*----------------------------------------
+	カード一覧
+----------------------------------------*/
+

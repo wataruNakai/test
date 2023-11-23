@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pon desigin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <!-- <link rel="stylesheet" href="./css/swiper.min.css"> -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <h1 class="header__logo">PON DESIGN</h1>
+                <button id="jsBtn" class="hamburger">
+                    <span class="hamburger__line"></span>
+                </button>
+
+                <div class="gnav">
+                    <ul>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="#">WORKS</a></li>
+                        <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">RECRUIT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div><!--gnav-->
+            </div><!--header__inner-->
+        </div>
+    </header>
+    <div class="hero">
+        <div class="hero__inner">
+            <h2 class="hero__ttl">WEB DESIGN<br> SPECIALIST</h2>
+            <p class="hero__txt">お客様の願いを叶える<br>WEBサイトを制作</p>
+            <a href="#" class="hero__btn btn">CONATCT</a>
+        </div><!--hero__inner-->
+        <span class="scroll">SCROLL</span>
+    </div><!--hero-->
+
+    <main class="mainContents">
+
+        <section class="news">
+            <div class="news__inner">
+                <h3 class="heading">
+                    <span class="ttl">NEWS</span>
+                    <span class="sub">お知らせ</span>
+                </h3>
+                <dl>
+                    <div class="flex">
+                        <dt>2030.02.01<span class="tag">お知らせ</span></dt>
+                        <dd>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</dd>    
+                    </div>
+                    <div class="flex">          
+                        <dt>2030.02.01<span class="tag">制作実績</span></dt>
+                        <dd>Smoothiesta様のWebサイトを制作いたしました</dd>
+                    </div>
+                    <div class="flex">
+                        <dt>2030.02.01<span class="tag">採用</span></dt>
+                        <dd>Webデザイナーを１名募集中です！</dd>
+                    </div>
+
+                </dl>
+            </div><!--news__inner-->
+        </section><!--news-->
+
+        <section class="service">
+            <div class="service__inner">
+                <h3 class="heading">
+                    <span class="ttl">SERVICE</span>
+                    <span class="sub">サービス</span>
+                </h3>
+
+                <div class="service__wrap">
+                    <ul class="service__wrap__items">
+                        <li class="item">
+                            <figure class="item__img"><img src="./img/service01.jpg" alt=""></figure>
+                            <p class="service__ttl">WEBサイト制作</p>
+                            <p class="service__txt">新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。</p>
+                        </li>
+                        <li class="item">
+                            <figure class="item__img"><img src="./img/service02.jpg" alt=""></figure>
+                            <p class="service__ttl">WEBサイト運用</p>
+                            <p class="service__txt">サイトの更新作業や独自のアクセス解析に基づいたサイト改善のご提案をいたします。</p>
+                        </li>
+                        <li class="item">
+                            <figure class="item__img"><img src="./img/service03.jpg" alt=""></figure>
+                            <p class="service__ttl">アプリ開発</p>
+                            <p class="service__txt">スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。</p>
+                        </li>
+                    </ul><!--item-->
+                </div><!--service__wrap-->
+                <a href="#" class="center__btn btn">MORE<i class="fas fa-sort-up"></i></a>
+            </div><!--service__inner-->
+        </section><!--service-->
+
+        <section class="works">
+            <div class="works__inner">
+
+                <div class="left_wrapper">
+                    <div class="swiper works__wrap">
+                        <!-- 必要に応じたwrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- スライド -->
+                        <div class="swiper-slide"><img src="./img/lamina.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/smoothiesta.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/web-conference.jpg" alt=""></div>
+                        </div>
+
+
+
+                        <!-- 必要に応じてナビボタン -->
+                        <div class="swiper-button-prev"></div>  
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                <!-- スライダーのコンテナ -->
+
+                </div>
+
+                <div class="works__box">
+                    <h3 class="heading">
+                        <span class="ttl">WORKS</span>
+                        <span class="sub">制作実績</span>
+                    </h3>
+                    <p class="works__txt">様々なジャンルのWebサイト制作が可能です。<br>
+                        ご購入やお申込み数の増加などを実現します！</p>
+                    <a href="#" class="center__btn btn">MORE<i class="fas fa-sort-up"></i></a>
+                </div>
+
+            </div><!--works__inner-->
+        </section><!--works-->
+
+        <section class="company">
+            <div class="company__inner">
+                <h3 class="heading">
+                    <span class="ttl">COMPANY</span>
+                    <span class="sub">私たちについて</span>
+                </h3>
+                <div class="margin-top" style=margin-top:20px;>
+                    <h4 class="company__message">サイトのゴール = <br>夢を叶えること</h4>
+                    <p class="company__txt">お客様の夢を叶えること。<br>
+                        それがWebサイトのゴールであり、<br>
+                        私たちが目指すことです。<br>
+                        だからこそちゃんと成果を出すサイトを<br>
+                        全力でお作りします。<br>
+                        お客様の笑顔を見たい。<br>
+                        夢を実現する手助けをさせてください。</p>
+    
+                        <a href="#" class="center__btn btn">MORE<i class="fas fa-sort-up"></i></a>
+
+                </div>
+            </div><!--company__inner-->
+        </section><!--company-->
+
+        <section class="recruit">
+            <div class="recruit__inner">
+                <figure class="recruit__image">
+                    <img class="recruit__img" src="./img/you-x-ventures-X8H8vPcelPk-unsplash.jpg" alt="">
+                </figure>
+                <div class="recruit__flex">
+                    <h3 class="recruit__heading heading">
+                        <span class="ttl">RECRUIT</span>
+                        <span class="sub">お問い合わせ</span>
+                    </h3>
+                    <p class="recruit__txt">私たちと一緒に働きませんか？</p>
+
+                    <a href="#" class="center__btn btn">MORE<i class="fas fa-sort-up"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact__inner">
+
+                <h3 class="contact__heading heading">
+                    <span class="ttl">CONATCT</span>
+                    <span class="sub">お問い合わせ</span>
+                </h3>
+                <p class="contact__txt">Webサイトの制作のご依頼やお見積りなど、
+                    <br>お気軽にご相談ください。</p>
+
+                <a href="#" class="center__btn btn">MORE<i class="fas fa-sort-up"></i></a>
+
+            </div>
+        </section>
+
+    </main><!--mainContents-->
+    <footer class="footer">
+        <div class="container">
+        <div class="footer__inner">
+            <ul class="footer__nav">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">WORKS</a></li>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">RECRUIT</a></li>
+                <li><a href="#">CONATCT</a></li>
+            </ul>
+
+            <small class="copy">&copy;PON DESIGN</small>
+        </div>
+    </div>
+    </footer>
+    <div class="pageTop"><a href="#"><i class="fa fa-long-arrow-up"></i></a></div>
+    <script src="./js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <!-- <script src="./js/swiper.min.js"></script> -->
+    <script src="./js/swiper.js"></script>
+
+</body>
+</html>
