@@ -1,0 +1,22 @@
+/*----------------------------------------
+    contact
+----------------------------------------*/
+.contact{
+    margin-top: 40px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+.contact__inner{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.contact__txt{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.8;
+
+    br{
+        display: block;
+    }
+}

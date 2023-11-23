@@ -1,0 +1,57 @@
+/*----------------------------------------
+	hero
+----------------------------------------*/
+.hero {
+    height: 100vh;
+    background-image: url(/img/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 17.0666666667vw;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: left;
+    padding-left: 30px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  
+  .hero__inner {
+    margin-left: 2.6666666667vw;
+  }
+  
+  .hero__ttl {
+    font-size: min(10.6666666667vw, 72px);
+    margin-bottom: 17px;
+    line-height: 1.1;
+  }
+  
+  .hero__txt {
+    font-size: min(4.2666666667vw, 24px);
+    margin-bottom: 28px;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+  }
+  
+  .hero__txt br {
+    display: block;
+  }
+  
+  @media (min-width: 768px) {
+    .hero {
+      text-align: center;
+      justify-content: center;
+      padding-top: 0;
+    }
+    .hero__inner {
+      margin-left: 0;
+    }
+    .hero__ttl br {
+      display: none;
+    }
+    .hero__txt br {
+      display: none;
+    }
+  }
+  

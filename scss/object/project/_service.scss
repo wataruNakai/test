@@ -1,0 +1,43 @@
+/*----------------------------------------
+	service
+----------------------------------------*/
+.service {
+    margin-top: 75px;
+  }
+  
+  .service__inner {
+    text-align: center;
+  }
+  
+  .item:first-child {
+    margin-top: 28px;
+  }
+  .item:not(:first-child) {
+    margin-top: 40px;
+  }
+  
+  .service__ttl {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    letter-spacing: 0.05em;
+  }
+  
+  .service__txt {
+    font-size: min(3.7333333333vw, 15px);
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+  
+  @media (min-width: 768px) {
+    .service {
+      max-width: 77.0833333333vw;
+      margin: 140px auto 0;
+    }
+    .service__wrap__items {
+      display: flex;
+      gap: 30px;
+    }
+  }
+  

@@ -1,0 +1,55 @@
+/*----------------------------------------
+    recruit
+----------------------------------------*/
+.recruit {
+    margin-top: 40px;
+    background: #F7F7F7;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  
+  .recruit__inner {
+    padding-bottom: 60px;
+  }
+  
+  .recruit__heading {
+    margin-top: 60px;
+  }
+  
+  .recruit__txt {
+    margin-top: 30px;
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .recruit {
+      max-width: 1110px;
+      margin: 0 auto;
+    }
+    .recruit__inner {
+      padding-bottom: 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding-bottom: 0;
+    }
+    .recruit__image {
+      flex-shrink: 1;
+    }
+    .recruit__img {
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+    .recruit__flex {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .recruit__heading {
+      margin-top: 0;
+    }
+  }
+  
