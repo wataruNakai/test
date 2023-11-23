@@ -1,0 +1,74 @@
+
+/*----------------------------------------
+	news
+----------------------------------------*/
+.news {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+  dl dt {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  dl dt:first-child {
+    margin-top: 30px;
+  }
+  dl dt:not(:first-child) {
+    margin-top: 35px;
+  }
+  dl dt .tag {
+    background-color: #E8E8E8;
+    display: inline-block;
+    border-radius: 50px;
+    width: 82px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 15px;
+  }
+  dl dd {
+    letter-spacing: 0.1em;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  
+  @media (min-width: 768px) {
+    .news {
+      max-width: 63.6805555556vw;
+      margin: 70px auto 0;
+    }
+    .news .heading {
+      margin-right: 48px;
+    }
+    .news__inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+    .flex:not(:first-child) {
+      margin-top: 15px;
+    }
+    dl dt {
+      align-items: flex-start;
+    }
+    dl dt:first-child {
+      margin-top: 0px;
+    }
+    dl dt:not(:first-child) {
+      margin-top: 18px;
+    }
+    dl dt {
+      margin-top: 18px;
+    }
+    dl dd {
+      padding-top: 0;
+      padding-left: 20px;
+    }
+  }

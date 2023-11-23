@@ -1,0 +1,81 @@
+/*----------------------------------------
+	works
+----------------------------------------*/
+.works__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 60px;
+    position: relative;
+  }
+  .works__inner::after {
+    content: "";
+    height: 68%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background: #f0f0f0;
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 calc(50% - 50vw);
+  }
+  
+  .works__box {
+    position: relative;
+  }
+  .works__box .heading {
+    margin-top: 40px;
+  }
+  
+  .works__txt {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .works__txt br {
+    display: block;
+  }
+  
+  @media (min-width: 768px) {
+    .works {
+      padding: 60px 0 40px 0;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .works__inner {
+      flex-direction: row;
+      align-items: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+    .works__inner::after {
+      position: absolute;
+      width: 60%;
+      height: 651px;
+      top: 50%;
+      right: 0;
+      left: auto;
+      transform: translateY(-50%);
+      margin: 0;
+    }
+    .left_wrapper {
+      width: 59.5238%;
+      margin-right: 30px;
+      position: static;
+    }
+    .swiper {
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .works__box {
+      flex: 1;
+      text-align: center;
+    }
+    .works__txt {
+      margin: 30px 0 25px;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+  }
+  
