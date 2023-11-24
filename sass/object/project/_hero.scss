@@ -1,0 +1,59 @@
+@use "../../global" as g;
+/*----------------------------------------
+	hero
+----------------------------------------*/
+.hero{
+    height: 100vh;
+    background-image: url(/img/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: calc(64/375*100vw);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: left;
+    padding-left: 30px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .hero__inner{
+    // margin-left: 10px;
+    margin-left: calc(10/375*100vw);
+  }
+  .hero__ttl{
+    font-size: min(calc(40/375*100vw),72px);
+    // margin-bottom: calc(17/375*100vw);
+    margin-bottom: 17px;
+    line-height: 1.1;
+  }
+  .hero__txt{
+    font-size: min(calc(16/375*100vw),24px);
+    // margin-bottom: calc(28/375*100vw);
+    margin-bottom: 28px;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+  }
+  .hero__txt br{
+    display: block;
+  }
+  @include g.mq(md){
+    .hero{
+        text-align: center;
+        justify-content: center;
+        padding-top: 0;
+    }
+    .hero__inner{
+        margin-left: 0;
+    }
+    .hero__ttl{
+        br{
+            display: none;
+        }
+    }
+    .hero__txt{
+        br{
+            display: none;
+        }
+    }
+  }

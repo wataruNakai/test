@@ -1,0 +1,15 @@
+@use "../../global" as g;
+/*----------------------------------------
+	heading
+----------------------------------------*/
+.heading{
+    text-align: center;
+    .ttl{
+        font-size: min(calc(30/375*100vw),36px);
+        color: g.$color-primary;
+    }
+    .sub{
+        display: block;
+        font-size:13px;
+    }
+}
