@@ -1,0 +1,54 @@
+@use "../../global" as g;
+
+/*----------------------------------------
+	btn
+----------------------------------------*/
+
+.btn{
+    font-size: 15px;
+    border: 1px solid #fff;
+    display: block;
+    width: 225px;
+    border-radius: 50px;
+    padding: 15px 70px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    
+  }
+  .center__btn{
+    width: 200px;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    background-image: g.$color-btn; 
+     color: #fff;
+    margin-top: 30px;
+    background-size: 200% auto;
+    transition: all 0.3s ease;
+    position: relative;
+    &:hover{
+      background-position: right center;
+  
+      .fa-sort-up{
+        right: 8%;
+      }
+  
+    }
+  }
+  .hero__btn{
+    position: relative;
+  }
+  .fa-sort-up{
+    display: block;
+    position: absolute;
+    right: 10%;
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+  
+  }
+  @include g.mq(md){
+    .btn{
+      margin: 30px auto 0;
+    }
+  }

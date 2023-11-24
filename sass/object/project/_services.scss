@@ -1,0 +1,41 @@
+@use "../../global" as g;
+
+/*----------------------------------------
+	service
+----------------------------------------*/
+.service{
+    margin-top: 75px;
+}
+.service__inner{
+    text-align: center;
+}
+.item{
+    &:first-child{
+        margin-top: 28px;
+    }
+    &:not(:first-child){
+        margin-top: 40px;
+    }
+}
+.service__ttl{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    letter-spacing: 0.05em;
+}
+.service__txt{
+    font-size: min(calc(14/375*100vw),15px);
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+}
+@media (min-width:768px){
+    .service{
+        max-width: calc(1110/1440*100vw);
+        margin: 140px auto 0;
+    }
+    .service__wrap__items{
+        display: flex;
+        gap: 30px;
+    }
+}
